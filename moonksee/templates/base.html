@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo-icon.ico' %}">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <!-- Navbar -->
+            <div class="navbar">
+                <div class="navbar__logo">
+                    <a href="#" class="navbar__logo-link"><img class="navbar__logo-link__img" src="{% static 'images/logo.svg' %}" alt="Moonksee"></a>
+                </div>
+                <nav class="nav">
+                    <ul class="navbar__nav">
+                        <li class="navbar__nav-item"><a href="#first-block" class="navbar__nav-item__links">Moon</a></li>
+                        <li class="navbar__nav-item"><a href="#second-block" class="navbar__nav-item__links">Space</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <div class="wrapper">
+                    <div class="mobile-nav" id="Mobile-nav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        <a href="#" class="mobile__link"><img src="{% static 'images/logo.svg' %}" alt="Moonksee" class="mobile__link-logo"></a>
+                        <a href="#first-block" class="mobile__link">Moon</a>
+                        <a href="#second-block" class="mobile__link">Space</a>
+                    </div>
+                    <div class="mobile-btn__container">
+                        <span onclick="openNav()" class="mobile-btn"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- index.html -->
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="wrapper">
+                <div class="border"></div>
+                <div class="footer__content">
+                    <div class="footer__content-item">
+                        <p class="footer__content-item__description">&#169 2022 Moonksee. All rights reserved.</p>
+                    </div>
+                    <div class="footer__content-item">
+                        <p class="watermark">Made by <span><a href="#" class="watermark-link">Kirill Ephanov</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/mobile-menu.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <article>
+        <div class="wrapper">
+            <!-- 3D model -->
+            <div class="moon">
+                <div class="sketchfab-embed-wrapper">
+                    <iframe title="The Moon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/9916fcec59f04b07b3e8d7f077dc3ded/embed?autospin=1&autostart=1&preload=1">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Down-button -->
+    <div class="down-btn">
+        <div class="down-btn__icon">
+            <a href="#first-block" class="down-btn__icon-link"><img class="down-btn__icon-img" src="{% static 'images/down-btn.svg' %}" alt="down"></a>
+        </div>
+    </div>
+    <!-- First block -->
+    <section class="text-block" id="first-block">
+        <div class="wrapper">
+            <div class="content-block content-block-first">
+                <h1 class="content-block__title">Shine Like The Moon Light</h1>
+                <p class="content-block__description">Curabitur class amet primis, condimentum inceptos ipsum a ligula, faucibus dapibus est leo nullam erat?</p>
+            </div>
+        </div>
+    </section>
+    <!-- Second block -->
+    <section class="text-block" id="second-block">
+        <div class="wrapper">
+            <div class="content-block content-block-second">
+                <h1 class="content-block__title">Your space with magic</h1>
+                <p class="content-block__description">Fusce quisque neque porta hendrerit, placerat at auctor sed, elementum tortor iaculis libero.</p>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
